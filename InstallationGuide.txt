@@ -1,0 +1,28 @@
+Installation Guide
+
+### 1. Database Setup
+1. Log in to your **cPanel** or Hosting Dashboard.
+2. Go to **MySQL Database Wizard** and create a new database (e.g., `bookclub_db`).
+3. Create a database user, assign a secure password, and connect them with **"ALL PRIVILEGES"**.
+4. Open **phpMyAdmin** from cPanel, select your newly created database.
+5. Go to the **Import** tab, upload the `database.sql` file from this package, and click **Go**. All mock data and tables will populate instantly.
+
+### 2. Configure Connection (`db.php`)
+Open `db.php` in a text editor and replace the placeholder connection details with your actual cPanel MySQL credentials:
+```php
+$db_host = 'localhost';     // Defaults to 'localhost' on most Apache / cPanel hostings
+$db_user = 'your_cpanel_db_username';
+$db_pass = 'your_cpanel_db_password';
+$db_name = 'your_cpanel_db_name';
+```
+
+### 3. Upload Files
+1. Open cPanel **File Manager** and navigate to your main domain root (`public_html`).
+2. Upload all the files inside this `php-version/` folder there (you can compress them into a `zip` file, upload, and extract for faster transfer).
+3. Open your browser and navigate to your website's URL (e.g., `https://yourdomain.com`). Your fully dynamic Book Club Portal is live!
+
+---
+
+## 🛡️ Default Test Accounts 
+* **Email:** `admin@rabbi.com`
+* **Password:** `12345678`
