@@ -132,7 +132,7 @@ if (isset($_POST['action_type']) && $_POST['action_type'] === 'delete_book') {
         }
     }
 }
-
+require_once 'header.php';
 // Load filters from URL parameters safely
 $search = isset($_GET['search']) ? mysqli_real_escape_string($conn, trim($_GET['search'])) : '';
 $selected_genre = isset($_GET['genre']) && $_GET['genre'] !== 'All' ? mysqli_real_escape_string($conn, trim($_GET['genre'])) : 'All';
