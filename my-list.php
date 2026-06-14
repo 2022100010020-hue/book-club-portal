@@ -1,11 +1,16 @@
 <?php
-require_once 'header.php';
+require_once 'db.php';
+
+$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
+$user_role = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : 'member';
 
 // Force authentication for this page
 if (!$user_id) {
     header('Location: auth.php');
     exit();
 }
+
+require_once 'header.php';
 
 $action_error = '';
 $success_message = '';
