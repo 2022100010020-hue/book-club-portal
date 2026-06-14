@@ -686,5 +686,3 @@ $featured_query = mysqli_query($conn, "
 <?php
 require_once 'footer.php';
 ?>
-p';
-?>
