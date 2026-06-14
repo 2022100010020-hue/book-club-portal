@@ -1,5 +1,9 @@
 <?php
-require_once 'header.php';
+require_once 'db.php';
+
+$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
+$user_email = isset($_SESSION['user_email']) ? $_SESSION['user_email'] : null;
+$user_role = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : 'member';
 
 $action_error = '';
 $form_error = '';
